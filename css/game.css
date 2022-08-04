@@ -1,0 +1,95 @@
+#game h1 {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 15px 0;
+    font-size: 1.5rem;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bg-grey {
+    background-color: var(--grey);
+    height: 180px;
+}
+
+.selected-image div {
+    width: 50%;
+    min-height: 80px;
+    text-align: center;
+}
+
+.selected-image div img {
+    max-width: 80%;
+}
+
+.reverse {
+    transform: scaleX(-1);
+}
+
+.movimentos h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 20px 0;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.buttons img {
+    max-width: 60%;
+}
+
+.movimento {
+    position: relative;
+}
+
+.btn {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    background-color: var(--grey);
+    cursor: pointer;
+    transition: .3s;
+}
+
+[type=radio] {
+    position: absolute;
+    left: 0;
+    opacity: 0%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+[type=radio]:checked+button {
+    background-color: var(--purple);
+}
+
+.btn-play,
+.btn-play:disabled:hover {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    background-color: var(--grey);
+    color: var(--dark);
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-play:hover {
+    background-color: var(--purple);
+    color: var(--white);
+}

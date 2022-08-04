@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra Papel Tesoura</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/container-placar.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+    <div id="game" class="container">
+        <h1>Pedra Papel Tesoura</h1>
+        <div class="bloco container-placar">
+            <div class="label bg-green">USER</div>
+            <div class="label bg-red">PC</div>
+            <div id="contador" class="placar">
+                0:0
+            </div>
+        </div>
+
+        <div class="bloco bg-grey selected-image">
+            <div id="user">
+                <img src="assets/images/rock.png" alt="">
+            </div>
+            <div id="pc" class="reverse"> </div>
+        </div>
+
+        <div class="movimentos">
+            <h2> Escolha seu movimento </h2>
+            <div class="buttons">
+                <label class="movimento">
+                    <input type="radio" name="play" value="rock" checked onclick="reset()">
+                    <button class="btn"> <img src="assets/images/rock.png" alt="Pedra"></button>
+                </label>
+                <label class="movimento">
+                    <input type="radio" name="play" value="paper" onclick="reset()">
+                    <button class="btn"> <img src="assets/images/paper.png" alt="Papel"></button>
+                </label>
+                <label class="movimento">
+                    <input type="radio" name="play" value="scissor" onclick="reset()">
+                    <button class="btn"> <img src="assets/images/scissor.png" alt="Tesoura"></button>
+                </label>
+            </div>
+            <div class="bloco">
+                <button id="playing" class="btn-play">Jogar</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="winner" class="container end-screen none">
+        <span>🏆🏆🏆</span>
+        <h3> Você ganhou! </h3>
+        <button onclick="newGame()"> Jogar Novamente</button>
+    </div>
+    <div id="loser" class="container end-screen none">
+        <h3> Você perdeu!</h3>
+        <button onclick="newGame()"> Jogar Novamente</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
